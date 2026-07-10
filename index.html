@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bitácora Tecnología Nelson Tzun</title>
-    <link rel="icon" type="image/png" href="Recursos/">
+    <link class="moz-annotation" icon" type="image/png" href="Recursos/">
     <style>
         html, body {
             height: 100%;
@@ -61,6 +61,7 @@
             max-width: 95%;
             box-shadow: 0 15px 40px rgba(0,0,0,0.15);
             border-left: 10px solid #bc13fe;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         /* Layout */
@@ -160,6 +161,12 @@
             box-shadow: 0 10px 25px rgba(0,0,0,0.2);
         }
 
+        .video {
+            flex: 1 1 300px;
+            display: flex;
+            justify-content: center;
+        }
+
         main {
             flex: 1;
             padding: 20px;
@@ -177,8 +184,8 @@
         }
 
         footer img {
-        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.3s ease;
-        cursor: pointer;
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.3s ease;
+            cursor: pointer;
         }
 
         footer img:hover {
@@ -202,16 +209,17 @@
 
     <main>
         <h4>Contenido de mi página WEB</h4>
+        
         <div class="semana">
             <h2>Semana 1: Mi archivo PDF</h2>
-                <div class="contenido-semana">
-                    <div class="texto">
-                        <p>A continuación puedes visualizar el documento elaborado en clase:</p>
-                    </div>
-                    <div class="pdf">
-                        <embed src="Recursos/introard.pdf" type="application/pdf">
-                    </div>
+            <div class="contenido-semana">
+                <div class="texto">
+                    <p>A continuación puedes visualizar el documento elaborado en clase:</p>
                 </div>
+                <div class="pdf">
+                    <embed src="Recursos/introard.pdf" type="application/pdf">
+                </div>
+            </div>
         </div>
 
         <div class="semana">
@@ -220,12 +228,49 @@
                 <div class="lado-izquierdo">
                     <p>A continuación puedes visualizar la imagen del trabajo realizado en clase:</p>
                 </div>
-                <div class="video"> <video controls width="100%">
-                <source src="Recursos/luzrgb.mp4" type="video/mp4">
-                Tu navegador no soporta la reproducción de videos.
-            </video>
+                <div class="video"> 
+                    <video controls width="100%">
+                        <source src="Recursos/luzrgb.mp4" type="video/mp4">
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                </div>
+            </div>
+        </div> <div class="semana">
+            <h2>Semana 3: Título de la Actividad</h2>
+            <div class="contenido-semana">
+                <div class="lado-izquierdo">
+                    <p>A continuación puedes visualizar el contenido de esta semana:</p>
+                </div>
+                <div class="imagen">
+                    <img src="Recursos/imagen_semana3.png" alt="Trabajo Semana 3">
+                </div>
             </div>
         </div>
+
+        <div class="semana">
+            <h2>Semana 4: Título de la Actividad</h2>
+            <div class="contenido-semana">
+                <div class="lado-izquierdo">
+                    <p>A continuación puedes visualizar el contenido de esta semana:</p>
+                </div>
+                <div class="imagen">
+                    <img src="Recursos/imagen_semana4.png" alt="Trabajo Semana 4">
+                </div>
+            </div>
+        </div>
+
+        <div class="semana">
+            <h2>Semana 5: Título de la Actividad</h2>
+            <div class="contenido-semana">
+                <div class="lado-izquierdo">
+                    <p>A continuación puedes visualizar el contenido de esta semana:</p>
+                </div>
+                <div class="imagen">
+                    <img src="Recursos/imagen_semana5.png" alt="Trabajo Semana 5">
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <footer>

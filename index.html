@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bitácora Technology Nelson Tzun</title>
+    <title>Bitácora Tecnología Nelson Tzun</title>
     <link class="moz-annotation" icon" type="image/png" href="Recursos/">
     <style>
         html, body {
             height: 100%;
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
         }
 
         body {
@@ -19,19 +21,22 @@
         }
 
         header {
-            padding: 20px;
-            background-color: gold;
+            padding: 25px;
+            background-color: #1e1e1e;
+            border-bottom: 2px solid #bc13fe;
         }
         
         h1{
             color: white;
             text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin: 0;
             text-shadow:
             0 0 5px #bc13fe,
             0 0 10px #bc13fe,
-            0 0 20px #bc13fe,
-            0 0 40px #bc13fe;
-            animation: parpadeo 1.5s infinite alternate;
+            0 0 20px #bc13fe;
+            animation: parpadeo 2s infinite alternate;
         }
         @keyframes parpadeo {
             0%, 100% {
@@ -39,94 +44,60 @@
                 text-shadow:
                     0 0 5px #bc13fe,
                     0 0 10px #bc13fe,
-                    0 0 20px #bc13fe,
-                    0 0 40px #bc13fe;
+                    0 0 20px #bc13fe;
             }
             50% {
-                opacity: 0.8;
+                opacity: 0.9;
                 text-shadow:
-                    0 0 2px #bc13fe,
-                    0 0 5px #bc13fe;
-            }
-            52%, 54% {
-                opacity: 0.5;
-                text-shadow: none;
+                    0 0 3px #bc13fe,
+                    0 0 6px #bc13fe;
             }
         }
+
+        h4 {
+            color: #a0a0a0;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
         .semana {
-            background: #ffffff;
+            background: #1e1e1e;
             border-radius: 20px;
-            padding: 30px;
-            margin: 30px auto;
-            max-width: 95%;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            padding: 20px;
+            margin: 25px auto;
+            max-width: 750px;
+            width: 90%;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
             border-left: 10px solid #bc13fe;
             transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .semana h2 {
+            color: #ffffff;
+            font-size: 22px;
+            margin-top: 5px;
+            text-align: left;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
         }
 
         /* Layout */
         .contenido-semana {
             display: flex;
-            align-items: center; /* centra verticalmente */
-            justify-content: space-between;
-            gap: 40px;
-        }
-
-        /* Texto más bonito */
-        .lado-izquierdo {
-            flex: 1;
-            font-size: 18px;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        /* PDF tipo "visor elegante" */
-        .pdf {
-            flex: 1.3;
-            display: flex;
-            justify-content: center;
-        }
-
-        .pdf embed {
-            width: 100%;
-            max-width: 500px; /* controla tamaño */
-            height: 500px;
-            border-radius: 15px;
-            border: none;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .contenido-semana {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .pdf embed {
-                height: 400px;
-            }
-        }
-
-        .semana {
-            max-width: 750px;   /* controla el tamaño total */
-            width: 90%;
-            padding: 20px;
-            margin: 20px auto;
-        }
-
-        /* Evita que el contenido lo expanda */
-        .contenido-semana {
-            display: flex;
             gap: 20px;
             align-items: center;
             justify-content: space-between;
-            flex-wrap: wrap; /* clave para que no se rompa */
+            flex-wrap: wrap;
         }
 
         /* Texto */
-        .lado-izquierdo {
+        .lado-izquierdo, .texto {
             flex: 1 1 250px;
+            font-size: 16px;
+            color: #b0b0b0;
+            line-height: 1.6;
+            text-align: left;
         }
 
         /* PDF controlado */
@@ -136,18 +107,16 @@
             justify-content: center;
         }
 
-        /* PDF más pequeño SIN romper el layout */
         .pdf embed {
             width: 100%;
-            max-width: 350px;  /* 🔥 esto es lo que realmente manda */
+            max-width: 350px;
             height: 450px;
+            border-radius: 15px;
+            border: 1px solid #333;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
         }
 
-        .semana:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(188, 19, 254, 0.2);
-        }
-
+        /* Imagen controlada */
         .imagen {
             flex: 1 1 300px;
             display: flex;
@@ -158,13 +127,40 @@
             width: 100%;
             max-width: 400px;
             border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+            border: 1px solid #333;
         }
 
+        /* Video controlado */
         .video {
             flex: 1 1 300px;
             display: flex;
             justify-content: center;
+        }
+
+        .video video {
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+            border: 1px solid #333;
+        }
+
+        .semana:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(188, 19, 254, 0.3);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .contenido-semana {
+                flex-direction: column;
+                text-align: center;
+            }
+            .lado-izquierdo, .texto {
+                text-align: center;
+            }
+            .pdf embed {
+                height: 400px;
+            }
         }
 
         main {
@@ -178,14 +174,16 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 150px;
-            border-top: 1px solid blue;
-            background-color: deepskyblue;
+            padding: 15px 50px;
+            border-top: 2px solid #bc13fe;
+            background-color: #1e1e1e;
+            color: #a0a0a0;
         }
 
         footer img {
             transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.3s ease;
             cursor: pointer;
+            filter: grayscale(20%) brightness(90%);
         }
 
         footer img:hover {
@@ -204,7 +202,7 @@
 </head>
 <body>
     <header>
-        <h1>Encabezado de mi página WEB</h1>
+        <h1>Bitácora de Tecnología</h1>
     </header>
 
     <main>
@@ -223,10 +221,10 @@
         </div>
 
         <div class="semana">
-            <h2>Semana 2: Arduino Tinkercad</h2>
+            <h2>Semana 2: Mi simulación en Tinkercad</h2>
             <div class="contenido-semana">
                 <div class="lado-izquierdo">
-                    <p>A continuación puedes visualizar la imagen del trabajo realizado en clase:</p>
+                    <p>A continuación puedes visualizar el video del circuito simulado en clase:</p>
                 </div>
                 <div class="video"> 
                     <video controls width="100%">
@@ -238,10 +236,10 @@
         </div>
 
         <div class="semana">
-            <h2>Semana 3: Secuenciador de LEDs</h2>
+            <h2>Semana 3: Mi circuito de LEDs en físico</h2>
             <div class="contenido-semana">
                 <div class="lado-izquierdo">
-                    <p>A continuación puedes visualizar el contenido de esta semana:</p>
+                    <p>A continuación puedes visualizar el video del circuito físico en funcionamiento:</p>
                 </div>
                 <div class="video">
                     <video controls width="100%">
@@ -253,10 +251,10 @@
         </div>
 
         <div class="semana">
-            <h2>Semana 4: Proyecto Elegoo Uno R3</h2>
+            <h2>Semana 4: Semaforo de LEDs</h2>
             <div class="contenido-semana">
                 <div class="lado-izquierdo">
-                    <p>A continuación puedes visualizar el contenido de esta semana:</p>
+                    <p>A continuación puedes visualizar el video del trabajo con la placa Arduino:</p>
                 </div>
                 <div class="video">
                     <video controls width="100%">
@@ -268,7 +266,7 @@
         </div>
 
         <div class="semana">
-            <h2>Semana 5: Título de la Actividad</h2>
+            <h2>Semana 5: Mi imagen de práctica</h2>
             <div class="contenido-semana">
                 <div class="lado-izquierdo">
                     <p>A continuación puedes visualizar el contenido de esta semana:</p>
@@ -283,7 +281,7 @@
 
     <footer>
         <span>2026 @Ticker_344</span>
-        <img src="https://www.capouilliez.edu.gt/assets/img/logo.png" alt="" width="200" height="50">
+        <img src="https://www.capouilliez.edu.gt/assets/img/logo.png" alt="Colegio Logo" width="200" height="50">
     </footer>
 </body>
 </html>

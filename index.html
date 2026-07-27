@@ -62,7 +62,6 @@
             letter-spacing: 1px;
         }
 
-        /* Estilos de las semanas agrupadas (Desplegables) */
         .semana {
             background: #1e1e1e;
             border-radius: 15px;
@@ -76,7 +75,6 @@
             text-align: left;
         }
 
-        /* Encabezado interactivo del desplegable */
         .semana summary {
             padding: 18px 25px;
             font-size: 20px;
@@ -91,7 +89,6 @@
             align-items: center;
         }
 
-        /* Indicador visual de abrir/cerrar */
         .semana summary::after {
             content: '▼';
             font-size: 14px;
@@ -107,7 +104,6 @@
             background-color: #262626;
         }
 
-        /* Contenido desplegado */
         .contenido-semana {
             display: flex;
             gap: 20px;
@@ -217,7 +213,7 @@
         <h4>Contenido de mi página WEB</h4>
         
         <!-- Grupo Semana 1 -->
-        <details class="semana" open>
+        <details class="semana">
             <summary>Semana 1: Mi archivo PDF</summary>
             <div class="contenido-semana">
                 <div class="texto">
@@ -315,5 +311,17 @@
         <span>2026 @Ticker_344</span>
         <img src="https://www.capouilliez.edu.gt/assets/img/logo.png" alt="Colegio Logo" width="200" height="50">
     </footer>
+
+    <!-- Script para abrir/cerrar automáticamente al pasar el cursor -->
+    <script>
+        document.querySelectorAll('details.semana').forEach(tarjeta => {
+            tarjeta.addEventListener('mouseenter', () => {
+                tarjeta.open = true;
+            });
+            tarjeta.addEventListener('mouseleave', () => {
+                tarjeta.open = false;
+            });
+        });
+    </script>
 </body>
 </html>

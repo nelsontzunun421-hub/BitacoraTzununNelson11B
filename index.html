@@ -89,15 +89,24 @@
             align-items: center;
         }
 
+        /* Ícono de taza AL INICIO de cada título */
+        .semana summary::before {
+            content: '☕ ';
+            margin-right: 10px;
+            font-size: 20px;
+        }
+
+        /* Ícono de taza en LUGAR DE LA FLECHA al final */
         .semana summary::after {
-            content: '▼';
-            font-size: 14px;
-            color: #bc13fe;
+            content: '☕';
+            font-size: 18px;
+            filter: drop-shadow(0 0 3px #bc13fe);
             transition: transform 0.3s ease;
         }
 
+        /* Rotación suave de la taza al desplegarse */
         .semana[open] summary::after {
-            transform: rotate(180deg);
+            transform: rotate(20deg) scale(1.2);
         }
 
         .semana summary:hover {

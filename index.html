@@ -4,32 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bitácora Tecnología Nelson Tzunún</title>
-    <!-- Favicon para la pestaña del navegador -->
-    <link rel="icon" type="image/png" href="Log,FonIma/cuphead%201.png">
+    <link rel="icon" type="image/png" href="cuphead.png">
     <style>
         html, body {
             height: 100%;
             margin: 0;
             font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #121212;
             color: #e0e0e0;
         }
 
-        /* Fondo de Cuphead (cuphead 2.jpeg) */
         body {
             display: flex;
             flex-direction: column;
             text-align: center;
-            background-image: url('Log,FonIma/cuphead%202.jpeg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-color: #121212; /* Respaldo si no carga la imagen */
         }
 
         header {
             padding: 25px;
-            background-color: rgba(30, 30, 30, 0.92);
+            background-color: #1e1e1e;
             border-bottom: 2px solid #bc13fe;
         }
         
@@ -41,13 +34,13 @@
             letter-spacing: 2px;
             margin: 0;
             text-shadow:
-                0 0 5px #bc13fe,
-                0 0 10px #bc13fe,
-                0 0 20px #bc13fe;
+            0 0 5px #bc13fe,
+            0 0 10px #bc13fe,
+            0 0 20px #bc13fe;
             animation: parpadeo 2s infinite alternate;
         }
 
-        /* Subtítulo con tu nombre debajo del título */
+        /* Estilo para ajustar el tamaño y margen del nombre */
         header h2 {
             font-size: 1.2rem;
             margin-top: 8px;
@@ -71,21 +64,20 @@
         }
 
         h4 {
-            color: #ffffff;
-            font-weight: 600;
+            color: #a0a0a0;
+            font-weight: 400;
             text-transform: uppercase;
             letter-spacing: 1px;
             margin-top: 25px;
-            text-shadow: 0 0 8px rgba(0,0,0,0.8);
         }
 
         .semana {
-            background: rgba(30, 30, 30, 0.92);
+            background: #1e1e1e;
             border-radius: 15px;
             margin: 15px auto;
             max-width: 750px;
             width: 90%;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
             border-left: 10px solid #bc13fe;
             transition: transform 0.3s, box-shadow 0.3s;
             overflow: hidden;
@@ -106,13 +98,13 @@
             align-items: center;
         }
 
-        /* Ícono Cuphead AL INICIO (cuphead 1.png) */
+        /* Ícono Cuphead AL INICIO */
         .semana summary::before {
             content: '';
             display: inline-block;
             width: 30px;
             height: 30px;
-            background-image: url('Log,FonIma/cuphead%201.png');
+            background-image: url('cuphead.png');
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
@@ -121,13 +113,13 @@
             filter: drop-shadow(0 0 4px #bc13fe);
         }
 
-        /* Ícono Cuphead AL FINAL (cuphead 1.png) */
+        /* Ícono Cuphead AL FINAL (Reemplazando la flecha) */
         .semana summary::after {
             content: '';
             display: inline-block;
             width: 28px;
             height: 28px;
-            background-image: url('Log,FonIma/cuphead%201.png');
+            background-image: url('cuphead.png');
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
@@ -141,7 +133,7 @@
         }
 
         .semana summary:hover {
-            background-color: rgba(38, 38, 38, 0.95);
+            background-color: #262626;
         }
 
         .contenido-semana {
@@ -191,7 +183,7 @@
 
         .semana:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(188, 19, 254, 0.4);
+            box-shadow: 0 15px 35px rgba(188, 19, 254, 0.3);
         }
 
         @media (max-width: 768px) {
@@ -212,8 +204,6 @@
             padding: 20px;
             max-width: 1200px;
             margin: 0 auto;
-            width: 100%;
-            box-sizing: border-box;
         }
 
         footer {
@@ -222,7 +212,7 @@
             align-items: center;
             padding: 15px 50px;
             border-top: 2px solid #bc13fe;
-            background-color: rgba(30, 30, 30, 0.95);
+            background-color: #1e1e1e;
             color: #a0a0a0;
         }
 

@@ -4,25 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bitácora Tecnología Nelson Tzunún</title>
-    <link rel="icon" type="image/png" href="cuphead.png">
+    <!-- Favicon de la pestaña actualizado -->
+    <link rel="icon" type="image/png" href="Log,FonIma/cuphead 1.png">
     <style>
         html, body {
             height: 100%;
             margin: 0;
             font-family: 'Segoe UI', Arial, sans-serif;
-            background-color: #121212;
             color: #e0e0e0;
         }
 
+        /* Fondo de Cuphead aplicado a todo el cuerpo */
         body {
             display: flex;
             flex-direction: column;
             text-align: center;
+            background-image: url('Log,FonIma/cuphead 2.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
         }
 
         header {
             padding: 25px;
-            background-color: #1e1e1e;
+            background-color: rgba(30, 30, 30, 0.92);
             border-bottom: 2px solid #bc13fe;
         }
         
@@ -64,20 +70,21 @@
         }
 
         h4 {
-            color: #a0a0a0;
-            font-weight: 400;
+            color: #ffffff;
+            font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1px;
             margin-top: 25px;
+            text-shadow: 0 0 8px rgba(0,0,0,0.8);
         }
 
         .semana {
-            background: #1e1e1e;
+            background: rgba(30, 30, 30, 0.92);
             border-radius: 15px;
             margin: 15px auto;
             max-width: 750px;
             width: 90%;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.7);
             border-left: 10px solid #bc13fe;
             transition: transform 0.3s, box-shadow 0.3s;
             overflow: hidden;
@@ -98,13 +105,13 @@
             align-items: center;
         }
 
-        /* Ícono Cuphead AL INICIO */
+        /* Ícono Cuphead AL INICIO (usando cuphead 1.png) */
         .semana summary::before {
             content: '';
             display: inline-block;
             width: 30px;
             height: 30px;
-            background-image: url('cuphead.png');
+            background-image: url('Log,FonIma/cuphead 1.png');
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
@@ -113,13 +120,13 @@
             filter: drop-shadow(0 0 4px #bc13fe);
         }
 
-        /* Ícono Cuphead AL FINAL (Reemplazando la flecha) */
+        /* Ícono Cuphead AL FINAL (usando cuphead 1.png) */
         .semana summary::after {
             content: '';
             display: inline-block;
             width: 28px;
             height: 28px;
-            background-image: url('cuphead.png');
+            background-image: url('Log,FonIma/cuphead 1.png');
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
@@ -133,7 +140,7 @@
         }
 
         .semana summary:hover {
-            background-color: #262626;
+            background-color: rgba(38, 38, 38, 0.95);
         }
 
         .contenido-semana {
@@ -183,7 +190,7 @@
 
         .semana:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(188, 19, 254, 0.3);
+            box-shadow: 0 15px 35px rgba(188, 19, 254, 0.4);
         }
 
         @media (max-width: 768px) {
@@ -204,6 +211,8 @@
             padding: 20px;
             max-width: 1200px;
             margin: 0 auto;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         footer {
@@ -212,7 +221,7 @@
             align-items: center;
             padding: 15px 50px;
             border-top: 2px solid #bc13fe;
-            background-color: #1e1e1e;
+            background-color: rgba(30, 30, 30, 0.95);
             color: #a0a0a0;
         }
 
@@ -276,7 +285,7 @@
 
         <!-- Grupo Semana 3 y 4 -->
         <details class="semana">
-            <summary>Semana 3 y 4: Mi circuito de LEDs en físico</summary>
+            <summary>Semana 3 y 4: Mi circuito de LEDs </summary>
             <div class="contenido-semana">
                 <div class="lado-izquierdo">
                     <p>A continuación puedes visualizar el video del circuito físico en funcionamiento:</p>

@@ -4,25 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bitácora Tecnología Nelson Tzunún</title>
-    <link rel="icon" type="image/png" href="cuphead.png">
     <style>
         html, body {
             height: 100%;
             margin: 0;
             font-family: 'Segoe UI', Arial, sans-serif;
-            background-color: #121212;
             color: #e0e0e0;
         }
 
+        /* CONFIGURACIÓN DEL FONDO */
         body {
             display: flex;
             flex-direction: column;
             text-align: center;
+            /* Si mueves la imagen a la raíz, usas 'cuphead 2.jpeg' o 'fondo.jpg' */
+            background-image: url('Log,FonIma/cuphead%202.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-color: #121212; /* Color oscuro de respaldo si falla la imagen */
         }
 
         header {
             padding: 25px;
-            background-color: #1e1e1e;
+            background-color: rgba(20, 20, 20, 0.88); /* Transparencia estilo Glassmorphism */
+            backdrop-filter: blur(8px); /* Efecto borroso elegante sobre el fondo */
             border-bottom: 2px solid #bc13fe;
         }
         
@@ -34,13 +41,12 @@
             letter-spacing: 2px;
             margin: 0;
             text-shadow:
-            0 0 5px #bc13fe,
-            0 0 10px #bc13fe,
-            0 0 20px #bc13fe;
+                0 0 5px #bc13fe,
+                0 0 10px #bc13fe,
+                0 0 20px #bc13fe;
             animation: parpadeo 2s infinite alternate;
         }
 
-        /* Estilo para ajustar el tamaño y margen del nombre */
         header h2 {
             font-size: 1.2rem;
             margin-top: 8px;
@@ -64,20 +70,23 @@
         }
 
         h4 {
-            color: #a0a0a0;
-            font-weight: 400;
+            color: #ffffff;
+            font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
             margin-top: 25px;
+            text-shadow: 0 0 10px rgba(0,0,0,0.9), 0 0 5px #bc13fe;
         }
 
+        /* Tarjetas de Semanas adaptadas para resaltar sobre el fondo */
         .semana {
-            background: #1e1e1e;
+            background: rgba(25, 25, 25, 0.90);
+            backdrop-filter: blur(5px);
             border-radius: 15px;
             margin: 15px auto;
             max-width: 750px;
             width: 90%;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
             border-left: 10px solid #bc13fe;
             transition: transform 0.3s, box-shadow 0.3s;
             overflow: hidden;
@@ -98,42 +107,8 @@
             align-items: center;
         }
 
-        /* Ícono Cuphead AL INICIO */
-        .semana summary::before {
-            content: '';
-            display: inline-block;
-            width: 30px;
-            height: 30px;
-            background-image: url('cuphead.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-            margin-right: 12px;
-            vertical-align: middle;
-            filter: drop-shadow(0 0 4px #bc13fe);
-        }
-
-        /* Ícono Cuphead AL FINAL (Reemplazando la flecha) */
-        .semana summary::after {
-            content: '';
-            display: inline-block;
-            width: 28px;
-            height: 28px;
-            background-image: url('cuphead.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-            filter: drop-shadow(0 0 4px #bc13fe);
-            transition: transform 0.3s ease;
-        }
-
-        /* Giro del ícono al abrir la tarjeta */
-        .semana[open] summary::after {
-            transform: rotate(25deg) scale(1.2);
-        }
-
         .semana summary:hover {
-            background-color: #262626;
+            background-color: rgba(45, 45, 45, 0.95);
         }
 
         .contenido-semana {
@@ -143,13 +118,13 @@
             justify-content: space-between;
             flex-wrap: wrap;
             padding: 20px 25px 25px 25px;
-            border-top: 1px solid #333;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .lado-izquierdo, .texto {
             flex: 1 1 250px;
             font-size: 16px;
-            color: #b0b0b0;
+            color: #d0d0d0;
             line-height: 1.6;
             text-align: left;
         }
@@ -166,7 +141,7 @@
             height: 450px;
             border-radius: 15px;
             border: 1px solid #333;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
         }
 
         .video {
@@ -177,13 +152,13 @@
 
         .video video {
             border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
             border: 1px solid #333;
         }
 
         .semana:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(188, 19, 254, 0.3);
+            box-shadow: 0 15px 35px rgba(188, 19, 254, 0.5);
         }
 
         @media (max-width: 768px) {
@@ -204,6 +179,8 @@
             padding: 20px;
             max-width: 1200px;
             margin: 0 auto;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         footer {
@@ -212,7 +189,8 @@
             align-items: center;
             padding: 15px 50px;
             border-top: 2px solid #bc13fe;
-            background-color: #1e1e1e;
+            background-color: rgba(20, 20, 20, 0.92);
+            backdrop-filter: blur(8px);
             color: #a0a0a0;
         }
 

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bitácora Tecnología Nelson Tzun</title>
-    <link rel="icon" type="image/png" href="https://www.capouilliez.edu.gt/assets/img/logo.png?v=2">
+    <title>Bitácora Tecnología Nelson Tzunún</title>
+    <link rel="icon" type="image/png" href="cuphead.png">
     <style>
         html, body {
             height: 100%;
@@ -26,7 +26,8 @@
             border-bottom: 2px solid #bc13fe;
         }
         
-        h1 {
+        /* Título Principal y Subtítulo con Brillo Neón */
+        h1, header h2 {
             color: white;
             text-transform: uppercase;
             font-weight: 700;
@@ -37,6 +38,13 @@
             0 0 10px #bc13fe,
             0 0 20px #bc13fe;
             animation: parpadeo 2s infinite alternate;
+        }
+
+        /* Estilo específico para ajustar el tamaño del nombre */
+        header h2 {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            letter-spacing: 1.5px;
         }
 
         @keyframes parpadeo {
@@ -89,24 +97,38 @@
             align-items: center;
         }
 
-        /* Ícono de taza AL INICIO de cada título */
+        /* Ícono Cuphead AL INICIO */
         .semana summary::before {
-            content: '☕ ';
-            margin-right: 10px;
-            font-size: 20px;
+            content: '';
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-image: url('cuphead.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin-right: 12px;
+            vertical-align: middle;
+            filter: drop-shadow(0 0 4px #bc13fe);
         }
 
-        /* Ícono de taza en LUGAR DE LA FLECHA al final */
+        /* Ícono Cuphead AL FINAL (Reemplazando flecha) */
         .semana summary::after {
-            content: '☕';
-            font-size: 18px;
-            filter: drop-shadow(0 0 3px #bc13fe);
+            content: '';
+            display: inline-block;
+            width: 28px;
+            height: 28px;
+            background-image: url('cuphead.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            filter: drop-shadow(0 0 4px #bc13fe);
             transition: transform 0.3s ease;
         }
 
-        /* Rotación suave de la taza al desplegarse */
+        /* Giro del ícono al abrir la tarjeta */
         .semana[open] summary::after {
-            transform: rotate(20deg) scale(1.2);
+            transform: rotate(25deg) scale(1.2);
         }
 
         .semana summary:hover {
@@ -216,6 +238,7 @@
 <body>
     <header>
         <h1>Bitácora de Tecnología</h1>
+        <h2>Nelson Tzunún Tzubán 11B</h2>
     </header>
 
     <main>
@@ -321,7 +344,7 @@
         <img src="https://www.capouilliez.edu.gt/assets/img/logo.png" alt="Colegio Logo" width="200" height="50">
     </footer>
 
-    <!-- Script para abrir/cerrar automáticamente al pasar el cursor -->
+    <!-- Script para desplegar automáticamente al pasar el cursor -->
     <script>
         document.querySelectorAll('details.semana').forEach(tarjeta => {
             tarjeta.addEventListener('mouseenter', () => {

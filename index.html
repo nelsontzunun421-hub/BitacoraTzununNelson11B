@@ -17,19 +17,18 @@
             display: flex;
             flex-direction: column;
             text-align: center;
-            /* Si mueves la imagen a la raíz, usas 'cuphead 2.jpeg' o 'fondo.jpg' */
             background-image: url('Log,FonIma/cuphead%202.jpeg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             background-attachment: fixed;
-            background-color: #121212; /* Color oscuro de respaldo si falla la imagen */
+            background-color: #121212;
         }
 
         header {
             padding: 25px;
-            background-color: rgba(20, 20, 20, 0.88); /* Transparencia estilo Glassmorphism */
-            backdrop-filter: blur(8px); /* Efecto borroso elegante sobre el fondo */
+            background-color: rgba(20, 20, 20, 0.88);
+            backdrop-filter: blur(8px);
             border-bottom: 2px solid #bc13fe;
         }
         
@@ -103,8 +102,32 @@
             outline: none;
             list-style: none;
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            gap: 12px; /* Espacio entre la taza y el texto */
+        }
+
+        /* ESTILO PARA LA TAZA FLUORESCENTE */
+        .icono-taza {
+            font-size: 24px;
+            display: inline-block;
+            text-shadow: 
+                0 0 5px #00ffcc,
+                0 0 10px #00ffcc,
+                0 0 20px #00ffcc; /* Brillo verde/cian neón */
+            animation: flotar 3s ease-in-out infinite alternate;
+        }
+
+        /* Si usas imágenes de tazas en vez de emojis */
+        .img-taza {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+            filter: drop-shadow(0 0 8px #00ffcc) drop-shadow(0 0 15px #00ffcc);
+        }
+
+        @keyframes flotar {
+            0% { transform: translateY(0px); }
+            100% { transform: translateY(-3px); }
         }
 
         .semana summary:hover {
@@ -225,7 +248,7 @@
         
         <!-- Grupo Semana 1 -->
         <details class="semana">
-            <summary>Semana 1: Mi archivo PDF</summary>
+            <summary><span class="icono-taza">☕</span> Semana 1: Mi archivo PDF</summary>
             <div class="contenido-semana">
                 <div class="texto">
                     <p>A continuación puedes visualizar el documento elaborado en clase:</p>
@@ -238,7 +261,7 @@
 
         <!-- Grupo Semana 2 -->
         <details class="semana">
-            <summary>Semana 2: Mi simulación en Tinkercad</summary>
+            <summary><span class="icono-taza">☕</span> Semana 2: Mi simulación en Tinkercad</summary>
             <div class="contenido-semana">
                 <div class="lado-izquierdo">
                     <p>A continuación puedes visualizar el video del circuito simulado en clase:</p>
@@ -254,7 +277,7 @@
 
         <!-- Grupo Semana 3 y 4 -->
         <details class="semana">
-            <summary>Semana 3 y 4: Mi circuito de LEDs en físico</summary>
+            <summary><span class="icono-taza">☕</span> Semana 3 y 4: Mi circuito de LEDs en físico</summary>
             <div class="contenido-semana">
                 <div class="lado-izquierdo">
                     <p>A continuación puedes visualizar el video del circuito físico en funcionamiento:</p>
@@ -270,7 +293,7 @@
 
         <!-- Grupo Semana 5 -->
         <details class="semana">
-            <summary>Semana 5: Semáforo de LEDs</summary>
+            <summary><span class="icono-taza">☕</span> Semana 5: Semáforo de LEDs</summary>
             <div class="contenido-semana">
                 <div class="lado-izquierdo">
                     <p>A continuación puedes visualizar el video del trabajo con la placa Arduino:</p>
@@ -286,7 +309,7 @@
 
         <!-- Grupo Semana 6 -->
         <details class="semana">
-            <summary>Semana 6: Mi imagen de práctica</summary>
+            <summary><span class="icono-taza">☕</span> Semana 6: Mi imagen de práctica</summary>
             <div class="contenido-semana">
                 <div class="lado-izquierdo">
                     <p>A continuación puedes visualizar el contenido de esta semana:</p>
@@ -302,7 +325,7 @@
         
         <!-- Grupo Semana 7 -->
         <details class="semana">
-            <summary>Semana 7: Sensor ultrasónico</summary>
+            <summary><span class="icono-taza">☕</span> Semana 7: Sensor ultrasónico</summary>
             <div class="contenido-semana">
                 <div class="lado-izquierdo">
                     <p>A continuación puedes visualizar el video del trabajo con la placa Arduino:</p>

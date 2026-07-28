@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bitácora Tecnología Nelson Tzunún</title>
-    <!-- Favicon de la pestaña actualizado -->
-    <link rel="icon" type="image/png" href="Log,FonIma/cuphead 1.png">
+    <!-- Favicon para la pestaña del navegador -->
+    <link rel="icon" type="image/png" href="Log,FonIma/cuphead%201.png">
     <style>
         html, body {
             height: 100%;
@@ -14,16 +14,17 @@
             color: #e0e0e0;
         }
 
-        /* Fondo de Cuphead aplicado a todo el cuerpo */
+        /* Fondo de Cuphead (cuphead 2.jpeg) */
         body {
             display: flex;
             flex-direction: column;
             text-align: center;
-            background-image: url('Log,FonIma/cuphead 2.jpeg');
+            background-image: url('Log,FonIma/cuphead%202.jpeg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             background-attachment: fixed;
+            background-color: #121212; /* Respaldo si no carga la imagen */
         }
 
         header {
@@ -40,13 +41,13 @@
             letter-spacing: 2px;
             margin: 0;
             text-shadow:
-            0 0 5px #bc13fe,
-            0 0 10px #bc13fe,
-            0 0 20px #bc13fe;
+                0 0 5px #bc13fe,
+                0 0 10px #bc13fe,
+                0 0 20px #bc13fe;
             animation: parpadeo 2s infinite alternate;
         }
 
-        /* Estilo para ajustar el tamaño y margen del nombre */
+        /* Subtítulo con tu nombre debajo del título */
         header h2 {
             font-size: 1.2rem;
             margin-top: 8px;
@@ -105,13 +106,13 @@
             align-items: center;
         }
 
-        /* Ícono Cuphead AL INICIO (usando cuphead 1.png) */
+        /* Ícono Cuphead AL INICIO (cuphead 1.png) */
         .semana summary::before {
             content: '';
             display: inline-block;
             width: 30px;
             height: 30px;
-            background-image: url('Log,FonIma/cuphead 1.png');
+            background-image: url('Log,FonIma/cuphead%201.png');
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
@@ -120,13 +121,13 @@
             filter: drop-shadow(0 0 4px #bc13fe);
         }
 
-        /* Ícono Cuphead AL FINAL (usando cuphead 1.png) */
+        /* Ícono Cuphead AL FINAL (cuphead 1.png) */
         .semana summary::after {
             content: '';
             display: inline-block;
             width: 28px;
             height: 28px;
-            background-image: url('Log,FonIma/cuphead 1.png');
+            background-image: url('Log,FonIma/cuphead%201.png');
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
@@ -285,7 +286,7 @@
 
         <!-- Grupo Semana 3 y 4 -->
         <details class="semana">
-            <summary>Semana 3 y 4: Mi circuito de LEDs </summary>
+            <summary>Semana 3 y 4: Mi circuito de LEDs en físico</summary>
             <div class="contenido-semana">
                 <div class="lado-izquierdo">
                     <p>A continuación puedes visualizar el video del circuito físico en funcionamiento:</p>
